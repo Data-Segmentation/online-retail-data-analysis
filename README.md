@@ -54,7 +54,7 @@ Online_Sales_Data_Analysis/<br>
 ## Installation
 Clone the repository and install the necessary dependencies using `pip`:
 ```bash
-git clone https://github.com/your-username/online-sales-data-analysis.git
+git clone https://github.com/mrowurakwarteng/online-sales-data-analysis.git
 cd online-retail-data-analysis
 pip install -r requirements.txt
 ```
