@@ -1,4 +1,4 @@
-# Online Sales Data Analysis Project
+# Online Sales Data Analyses
 
 ## Overview
 A comprehensive analysis on an online retail transaction data set for 13 months. The dataset is from 
@@ -25,33 +25,8 @@ code starts with the letter 'c', it indicates a cancellation.<br>
 The project is organized into the following directories:
 
 
-Online_Sales_Data_Analysis/
-│
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── data/
-│   ├── raw/
-│   └── processed/
-│   
-├── docs/
-│   ├── customer-lifetime-value.md
-│   ├── customer-patronage-forecast.md
-│   ├── customer-retention.md
-│   ├── daily-purchase-trend.md
-│   └── data-processing.md
-├── scripts/
-│   ├── EDA/
-│   ├── customer_lifetime_value.py
-│   ├── customer_patronage_forecast.py
-│   ├── customer_retention.py
-│   └── daily_purchase_trend.py
-└── figures/
-    ├── CLV/
-    ├── customer-patronage-forecast/
-    ├── customer-retention/
-    ├── daily-trend/
-    └── EDA/
+Online_Sales_Data_Analysis/<br>
+<img src="https://github.com/Data-Segmentation/online-retail-data-analysis/blob/main/images/project-structure.JPG">
 
 
 ### Description of Directories
