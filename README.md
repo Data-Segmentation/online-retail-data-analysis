@@ -119,7 +119,7 @@ The daily purchase trend module focuses on:
 Contributions are welcome! Please fork the repository and submit pull requests with any improvements or additional features.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details..
 
 ## Note: 
 I did an analysis on _items that are mostly purchased together_; I have the code for it, but it is **NOT TESTED!**.  
