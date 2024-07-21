@@ -1,4 +1,3 @@
-```markdown
 # Online Sales Data Analysis Project
 
 ## Overview
@@ -25,7 +24,7 @@ code starts with the letter 'c', it indicates a cancellation.<br>
 ## Project Structure
 The project is organized into the following directories:
 
-```
+
 Online_Sales_Data_Analysis/
 │
 ├── README.md
@@ -53,7 +52,7 @@ Online_Sales_Data_Analysis/
     ├── customer-retention/
     ├── daily-trend/
     └── EDA/
-```
+
 
 ### Description of Directories
 - **data/**: This directory contains all data-related files.
