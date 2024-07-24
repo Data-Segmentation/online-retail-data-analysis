@@ -48,7 +48,13 @@ Online_Sales_Data_Analysis/<br>
   - `customer_retention.py`: Script for calculating customer retention rates.
   - `daily_purchase_trend.py`: Script for determining purchase trends.
 
-- **figures/**: Generated plots/visualizations for the respective scritps.
+- **figures/**: Generated plots/visualizations for the respective scritps
+- **images/**: Contains photos necessary for publishing the project in this repo
+- **Requirements.txt**: This is a file containing the libraries (specific versions) used for the project. Install them using...
+  ```bash
+  pip install -r requirements.txt
+  ```
+
 
 
 ## Installation
