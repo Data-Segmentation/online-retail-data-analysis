@@ -26,7 +26,7 @@ The project is organized into the following directories:
 
 
 Online_Sales_Data_Analysis/<br>
-<img src="https://github.com/Data-Segmentation/online-retail-data-analysis/blob/main/images/project-structure.JPG">
+<img src="https://github.com/Data-Segmentation/online-retail-data-analysis/blob/main/images/project-structure-update.JPG">
 
 
 ### Description of Directories
