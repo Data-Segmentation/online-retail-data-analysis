@@ -31,8 +31,11 @@ Online_Sales_Data_Analysis/<br>
 
 ### Description of Directories
 - **data/**: This directory contains all data-related files.
-  - `raw/`: Contains raw data files as received from the source.
-  - `processed/`: Contains data that has been cleaned and processed.
+  The size of the files are too big, download them from [AWS](https://us-east-1.console.aws.amazon.com/s3/buckets/online-retail-data-analysis?prefix=data/&region=us-east-1&bucketType=general)
+  or [Google Drive](https://drive.google.com/drive/folders/1BykNL244894z0LIvTh_sx3-SKtWD9pW_) and put 
+  in the `data/` directory
+  - `online-retail.xlsx`: raw data as received from the source.
+  - `cleaned-data.csv`: data that has been cleaned and pre-processed.
 
 - **docs/**: Documentations for different stages of the project.
   - `customer-lifetime-value.md`: calculation and analysis of CLV.
