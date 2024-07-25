@@ -29,7 +29,7 @@ The script performs data loading, cleaning, processing, and various analytical t
 
 ### Data Loading
 
-The dataset is loaded from an Excel file located at `../data/raw/online-retail.xlsx`. The initial data exploration 
+The dataset is loaded from an Excel file located at `../data/online-retail.xlsx`. The initial data exploration 
 includes viewing the dataset's information and statistical summary. This helps in understanding the structure and basic 
 statistics of the dataset.
 
@@ -38,7 +38,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data
-df = pd.read_excel('../data/raw/online-retail.xlsx')
+df = pd.read_excel('../data/online-retail.xlsx')
 
 # Get info about dataset
 df.info()
