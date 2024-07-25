@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # load data
-df = pd.read_csv('../../data/processed/cleaned-data.csv')
+df = pd.read_csv('../../data/cleaned-data.csv')
 
 # invoice with the high returns (first five)
 valuable_invoice = df.groupby('InvoiceNo')['TotalPrice'].sum().nlargest(5)
