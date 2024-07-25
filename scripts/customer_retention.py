@@ -130,7 +130,7 @@ def plot_cohort_analysis(retention, cohort_counts, cohort_monetary):
 
 # Main script execution
 if __name__ == "__main__":
-    filepath = '../data/processed/cleaned-data.csv'
+    filepath = '../data/cleaned-data.csv'
     df = load_data(filepath)
 
     if df is not None:
