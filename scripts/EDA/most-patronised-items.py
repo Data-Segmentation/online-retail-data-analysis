@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # load data
-df = pd.read_csv('../../data/processed/cleaned-data.csv')
+df = pd.read_csv('../../data/cleaned-data.csv')
 
 # monthly trend of most patronised products (first five)
 item_patronage = df.groupby('Description')['Quantity'].sum().nlargest(5)
