@@ -30,7 +30,7 @@ pip install pandas matplotlib statsmodels
 ### File Structure
 
 - `daily_purchase_trend.py`: The main script for data analysis and visualization.
-- `../data/processed/cleaned-data.csv`: The input CSV file containing cleaned sales data.
+- `../data/cleaned-data.csv`: The input CSV file containing cleaned sales data.
 - `../results/figures/daily-trend/`: Directory where output figures will be saved.
 
 ### Script Description
@@ -68,7 +68,7 @@ To run the script, execute it from the command line:
 python daily_purchase_trend.py
 ```
 
-Ensure that the input file exists at the specified path (`../data/processed/cleaned-data.csv`) and that the output directory 
+Ensure that the input file exists at the specified path (`../data/cleaned-data.csv`) and that the output directory 
 (`../figures/daily-trend/`) exists or can be created.
 
 ### Example Output
