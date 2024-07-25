@@ -11,7 +11,7 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 
 # Load data with error handling
 try:
-    df = pd.read_csv('../data/processed/cleaned-data.csv')
+    df = pd.read_csv('../data/cleaned-data.csv')
     df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
 except FileNotFoundError:
     print("Error: The file was not found. Please check the file path.")
