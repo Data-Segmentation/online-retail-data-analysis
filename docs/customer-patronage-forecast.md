@@ -39,7 +39,7 @@ pip install pandas matplotlib statsmodels scikit-learn
 
 ## Data
 
-The analysis uses a CSV file located at `../data/processed/cleaned-data.csv`. The CSV file should contain the following columns:
+The analysis uses a CSV file located at `../data/cleaned-data.csv`. The CSV file should contain the following columns:
 
 - **`InvoiceDate`**: The date of the transaction in a recognizable date format (e.g., YYYY-MM-DD).
 - **`CustomerID`**: A unique identifier for customers.
@@ -55,7 +55,7 @@ handling is included to manage potential issues such as file not found or incorr
 
 ```python
 try:
-    df = pd.read_csv('../data/processed/cleaned-data.csv')
+    df = pd.read_csv('../data/cleaned-data.csv')
     df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
 except FileNotFoundError:
     print("Error: The file was not found. Please check the file path.")
@@ -173,7 +173,7 @@ print('MAPE:', mape)
 
 ## Usage
 
-1. Ensure that your data file is properly formatted and located at `../data/processed/cleaned-data.csv`.
+1. Ensure that your data file is properly formatted and located at `../data/cleaned-data.csv`.
 2. Install the required Python packages.
 3. Run the script to perform the forecast analysis. The script will handle data loading, preprocessing, model fitting, forecasting, and visualization.
 
@@ -183,7 +183,7 @@ Contributions are welcome! If you encounter any issues or have suggestions for i
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
 ```
 This elaborative README provides a detailed overview of each step in the code, explaining its purpose and functionality, and ensures users understand 
 how to use and contribute to the project.
