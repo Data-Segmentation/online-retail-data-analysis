@@ -189,7 +189,7 @@ def profile_clusters(rfm):
 
 # Main function to run the analyses
 def main():
-    filepath = '../data/processed/cleaned-data.csv'
+    filepath = '../data/cleaned-data.csv'
     df = load_data(filepath)
     if df is not None:
         rfm = rfm_analysis(df)
