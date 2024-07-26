@@ -12,7 +12,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.cluster import KMeans
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_absolute_percentage_error, silhouette_score, davies_bouldin_score, accuarcy_score
+from sklearn.metrics import mean_absolute_percentage_error, silhouette_score, davies_bouldin_score, accuracy_score
 from sklearn.model_selection import train_test_split, GridSearchCV
 
 # load data
