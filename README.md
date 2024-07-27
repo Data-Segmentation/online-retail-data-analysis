@@ -1,4 +1,4 @@
-# Online Sales Data Analyses
+# Online Retail Sales Data Analysis
 
 ## Overview
 A comprehensive analysis on an online retail transaction data set for 13 months. The dataset is from 
