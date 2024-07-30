@@ -139,3 +139,6 @@ challenge. The result of this analysis has the potential to increase business ga
 
 This README.md file provides a clear and organized structure for "Online Sales Data Analysis" project. It includes sections for project 
 overview, installation instructions, usage guidelines, and references to each project module.
+
+---
+The conversation continues on [**Medium**](https://medium.com/@mrowurakwarteng/from-clicks-to-cash-mastering-online-sales-data-c522919e6231) and [**Kaggle**](https://www.kaggle.com/work/collections/14380928)
