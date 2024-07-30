@@ -23,6 +23,7 @@ except pd.errors.ParserError:
     print("Error: The file could not be parsed. Please check the file format.")
     df = None
 
+# monetary returns
 if df is not None:
     # Check for required columns
     required_columns = ['InvoiceDate', 'TotalPrice']
@@ -38,6 +39,24 @@ if df is not None:
             print("Error: 'TotalPrice' column is not numeric.")
             df = None
 
+
+# number of customers
+if df is not None:
+    # Check for required columns
+    required_columns = ['InvoiceDate', 'InvoiceNo']
+    if not all(col in df.columns for col in required_columns):
+        print(f"Error: The DataFrame is missing one or more required columns: {required_columns}")
+        df = None
+    else:
+        # Validate data types
+        if not pd.api.types.is_datetime64_any_dtype(df['InvoiceDate']):
+            print("Error: 'InvoiceDate' column is not in datetime format.")
+            df = None
+        elif not pd.api.types.is_numeric_dtype(df['InvoiceNo']):
+            print("Error: 'InvoiceNo' column is not numeric.")
+            df = None
+
+# monetary returns
 if df is not None:
     # Proceed with data processing
     try:
@@ -68,7 +87,7 @@ if df is not None:
         plt.plot(seasonal_pattern, marker='o', linestyle='-', color='b', markersize=6)
         plt.xlabel('Day', fontsize=12)
         plt.ylabel('Purchase Consistency', fontsize=12)
-        plt.title('Purchase Trend of the First Two Weeks', fontsize=14)
+        plt.title('Purchase Trend for the First Two Weeks', fontsize=14)
         plt.grid(True, linestyle='--', alpha=0.7)
 
         # Annotate each point with the day of the week
@@ -76,14 +95,67 @@ if df is not None:
             plt.annotate(days_of_week[i], (date, value), textcoords="offset points", xytext=(0, 10), ha='center', fontsize=9, color='red')
 
         plt.tight_layout()
-        plt.savefig('../figures/daily-trend/seasonal-plot.jpg')
+        plt.savefig('../figures/daily-trend/purchase-seasonal-plot.jpg')
 
     except KeyError as e:
-        print(f"Error: KeyError encountered during processing. {e}")
+        print(f"Error: KeyError encountered during processing purchase trend. {e}")
     except ValueError as e:
-        print(f"Error: ValueError encountered during processing. {e}")
+        print(f"Error: ValueError encountered during processing purchase trend. {e}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        print(f"An unexpected error occurred during processing purchase trend: {e}")
+
+else:
+    print("DataFrame is not loaded. Please check the errors above and try again.")
+
+
+# number of customers
+if df is not None:
+    # Proceed with data processing
+    try:
+
+        # Resample the data to get daily revenue
+        daily_customers = df['InvoiceNo'].resample('D').sum()
+
+        # Decompose the time series
+        customers_trend = seasonal_decompose(daily_customers, model='additive')
+
+        # Plot the decomposition
+        plt.figure(figsize=(12, 8))
+        purchase_trend.plot()
+        plt.suptitle('Customers Trend Decomposition', fontsize=16)
+        plt.tight_layout()
+        plt.savefig('../figures/daily-trend/customers-trends.jpg')
+
+        # Sneak peek into the seasonal plot
+        seasonal = customers_trend.seasonal
+        seasonal_pattern = seasonal[:14]  # Extract the first 14-days
+
+        # Improve the day labels
+        days_of_week = seasonal_pattern.index.strftime('%a')
+
+        # Create a plot for the first two weeks
+        plt.figure(figsize=(10, 6))
+        plt.plot(seasonal_pattern, marker='o', linestyle='-', color='b', markersize=6)
+        plt.xlabel('Day', fontsize=12)
+        plt.ylabel('Customers Consistency', fontsize=12)
+        plt.title('Customers Behaviour Trend for the First Two Weeks', fontsize=14)
+        plt.grid(True, linestyle='--', alpha=0.7)
+
+        # Annotate each point with the day of the week
+        for i, (date, value) in enumerate(seasonal_pattern.items()):
+            plt.annotate(days_of_week[i], (date, value), textcoords="offset points", xytext=(0, 10), ha='center',
+                         fontsize=9, color='red')
+
+        plt.tight_layout()
+        plt.savefig('../figures/daily-trend/customers-seasonal-plot.jpg')
+
+
+    except KeyError as e:
+        print(f"Error: KeyError encountered during processing customers trend. {e}")
+    except ValueError as e:
+        print(f"Error: ValueError encountered during processing customers trend. {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred during processing customers trend: {e}")
 
 else:
     print("DataFrame is not loaded. Please check the errors above and try again.")
