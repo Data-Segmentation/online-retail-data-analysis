@@ -2,7 +2,7 @@
 
 ## Overview
 A comprehensive analysis on an online retail transaction data set for 13 months. The dataset is from 
-[UCI Machine Learning Repository](https://www.kaggle.com/datasets/lakshmi25npathi/online-retail-dataset)<br>
+[UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/352/online+retail)<br>
 
 This repository is a valuable resource for stakeholders interested in leveraging the power of data analytics 
 to enhance business performance in the online retail sector. Through descriptive and advanced analytics, this 
