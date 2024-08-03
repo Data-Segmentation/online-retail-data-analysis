@@ -63,7 +63,7 @@ Online_Sales_Data_Analysis/<br>
 ## Installation
 Clone the repository and install the necessary dependencies using `pip`:
 ```bash
-git clone https://github.com/mrowurakwarteng/online-retail-data-analysis.git
+git clone https://github.com/DataAnalyticaLab/online-retail-sales-data-analysis.git
 cd online-retail-data-analysis
 pip install -r requirements.txt
 ```
